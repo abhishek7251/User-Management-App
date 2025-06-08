@@ -1,0 +1,31 @@
+
+   
+   
+<div class="search-container">
+    <mat-form-field class="search-box" appearance="outline">
+      <mat-label>Search User</mat-label>
+      <input
+        type="text"
+        matInput
+        [formControl]="searchControl"
+        [matAutocomplete]="auto"
+        [value]="displayFn(searchControl.value)"
+      />
+      <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn" (optionSelected)="onUserSelected($event)">
+        <mat-option *ngFor="let user of filteredOptions | async" [value]="user">
+          <div class="user-option">
+            <img [src]="user.image" alt="{{ user.firstName }}" class="user-image" />
+            <div class="user-info">
+              <div class="user-name">{{ user.firstName }} {{ user.lastName }}</div>
+              <div class="user-details">ID: {{ user.id }} | SSN: {{ user.ssn }}</div>
+              <div class="user-email">{{ user.email }}</div>
+            </div>
+          </div>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </div>
+
+
+   
+   

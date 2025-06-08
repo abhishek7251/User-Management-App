@@ -1,0 +1,47 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88vh;
+  }
+   
+  .search-box {
+    width: 100%;
+    max-width: 90%;
+  }
+   
+  .mat-form-field {
+    width: 100%;
+  }
+   
+  .user-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+   
+  .user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
+   
+  .user-info {
+    display: flex;
+    flex-direction: column;
+  }
+   
+  .user-name {
+    font-weight: bold;
+  }
+   
+  .user-details,
+  .user-email {
+    font-size: 12px;
+    color: gray;
+  }
+
+
+
+ 
+   
